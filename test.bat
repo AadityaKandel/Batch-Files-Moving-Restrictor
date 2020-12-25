@@ -1,5 +1,5 @@
 :star
-
+del abandon.bat
 echo off
 color a
 cls
@@ -24,6 +24,7 @@ goto star
 )
 
 if %ans%==2 (
+del abandon.bat
 cls
 taskkill /PID cmd.exe /F
 cls
