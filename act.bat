@@ -10,36 +10,40 @@ echo Location: %dirr%
 echo Return Location: %dirrr%
 echo Activating Abandon Mode In
 timeout /T 6
-cd %dirr%
-cls
 title Activated Abandon Mode
 cls
-:abandon
+
+echo :abandon>abandon.bat
+echo cd "%dirr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.mp4 "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.mp3 "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.txt "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.py "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.cpp "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.exe "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.rar "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.zip "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.png "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.jpg "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.html "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.torrent "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo move *.srt "%dirrr%">>abandon.bat
+echo cls>>abandon.bat
+echo goto abandon>>abandon.bat
+start /MIN abandon.bat
 cls
-move *.mp4 "%dirrr%"
-cls
-move *.mp3 "%dirrr%"
-cls
-move *.txt "%dirrr%"
-cls
-move *.py "%dirrr%"
-cls
-move *.cpp "%dirrr%"
-cls
-move *.exe "%dirrr%"
-cls
-move *.rar "%dirrr%"
-cls
-move *.zip "%dirrr%"
-cls
-move *.png "%dirrr%"
-cls
-move *.jpg "%dirrr%"
-cls
-move *.html "%dirrr%"
-cls
-move *.torrent "%dirrr%"
-cls
-move *.srt "%dirrr%"
-cls
-goto abandon
+set /P done="Done.. ABANDON MODE ACTIVATED [ PRESS ANY KEY TO EXIT ] "
+EXIT
